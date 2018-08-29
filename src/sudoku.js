@@ -44,7 +44,90 @@ function is_sub_array_valid(subArray) {
     }
 }
 
+function get_row(arrayOfSubArrays, which) {
+    if (!arrayOfSubArrays ||
+        arrayOfSubArrays.length < 3 ||
+        arrayOfSubArrays[0].length < 3 ||
+        arrayOfSubArrays[1].length < 3 ||
+        arrayOfSubArrays[2].length < 3)
+        return [];
+
+    var index0 = 0;
+    var index1 = 1;
+    var index2 = 2;
+
+    if ( which === 'bottom' ) {
+        index0 = 6;
+        index1 = 7;
+        index2 = 8;
+    }
+    else if ( which === 'middle' ) {
+        index0 = 3;
+        index1 = 4;
+        index2 = 5;
+    }
+
+    const array0 = arrayOfSubArrays[0];
+    const array1 = arrayOfSubArrays[1];
+    const array2 = arrayOfSubArrays[2];
+    return [
+        array0[index0],
+        array0[index1],
+        array0[index2],
+
+        array1[index0],
+        array1[index1],
+        array1[index2],
+
+        array2[index0],
+        array2[index1],
+        array2[index2]
+    ];
+}
+
+function get_column(arrayOfSubArrays, which) {
+    if (!arrayOfSubArrays ||
+        arrayOfSubArrays.length < 3 ||
+        arrayOfSubArrays[0].length < 3 ||
+        arrayOfSubArrays[1].length < 3 ||
+        arrayOfSubArrays[2].length < 3)
+        return [];
+
+    var index0 = 0;
+    var index1 = 3;
+    var index2 = 6;
+
+    if ( which === 'right' ) {
+        index0 = 2;
+        index1 = 5;
+        index2 = 8;
+    }
+    else if ( which === 'middle' ) {
+        index0 = 1;
+        index1 = 4;
+        index2 = 7;
+    }
+
+    const array0 = arrayOfSubArrays[0];
+    const array1 = arrayOfSubArrays[1];
+    const array2 = arrayOfSubArrays[2];
+    return [
+        array0[index0],
+        array0[index1],
+        array0[index2],
+
+        array1[index0],
+        array1[index1],
+        array1[index2],
+
+        array2[index0],
+        array2[index1],
+        array2[index2]
+    ];
+}
 module.exports = {
+    get_column,
+    get_row,
     is_solution,
     is_sub_array_valid
 };

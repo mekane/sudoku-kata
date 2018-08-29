@@ -53,11 +53,107 @@ describe('The sudoku module', () => {
         });
 
         it('should return true for valid arrays', () => {
-            const validArray1 = [1,2,3,4,5,6,7,8,9];
+            const validArray1 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
             expect(sudoku.is_sub_array_valid(validArray1)).to.equal(true);
 
-            const validArray2 = [5,7,2,1,4,8,9,3,6];
+            const validArray2 = [5, 7, 2, 1, 4, 8, 9, 3, 6];
             expect(sudoku.is_sub_array_valid(validArray2)).to.equal(true);
+        });
+    });
+
+    describe('getting rows from the main grid', () => {
+        it('should be a method exported from the main module', () => {
+            expect(sudoku.get_row).to.be.a('function');
+        });
+
+        it('return an empty array for invalid arguments', () => {
+            expect(sudoku.get_row()).to.deep.equal([]);
+            expect(sudoku.get_row([])).to.deep.equal([]);
+            expect(sudoku.get_row([[], [], []])).to.deep.equal([]);
+        });
+
+        it('expects an array of three sub-arrays and a specifier, and returns the top three cells of each', () => {
+            const subArrays = [
+                [1, 2, 3, 4, 5, 6, 7, 8, 9],
+                [1, 2, 3, 4, 5, 6, 7, 8, 9],
+                [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            ];
+
+            const expectedResult = [1, 2, 3, 1, 2, 3, 1, 2, 3];
+
+            expect(sudoku.get_row(subArrays, 'top')).to.deep.equal(expectedResult);
+        });
+
+        it('expects an array of three sub-arrays and a specifier, and returns the middle three cells of each', () => {
+            const subArrays = [
+                [1, 2, 3, 4, 5, 6, 7, 8, 9],
+                [1, 2, 3, 4, 5, 6, 7, 8, 9],
+                [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            ];
+
+            const expectedResult = [4, 5, 6, 4, 5, 6, 4, 5, 6];
+
+            expect(sudoku.get_row(subArrays, 'middle')).to.deep.equal(expectedResult);
+        });
+
+        it('expects an array of three sub-arrays and a specifier, and returns the bottom three cells of each', () => {
+            const subArrays = [
+                [1, 2, 3, 4, 5, 6, 7, 8, 9],
+                [1, 2, 3, 4, 5, 6, 7, 8, 9],
+                [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            ];
+
+            const expectedResult = [7, 8, 9, 7, 8, 9, 7, 8, 9];
+
+            expect(sudoku.get_row(subArrays, 'bottom')).to.deep.equal(expectedResult);
+        });
+    });
+
+    describe('getting columns from the main grid', () => {
+        it('should be a method exported from the main module', () => {
+            expect(sudoku.get_column).to.be.a('function');
+        });
+
+        it('return an empty array for invalid arguments', () => {
+            expect(sudoku.get_column()).to.deep.equal([]);
+            expect(sudoku.get_column([])).to.deep.equal([]);
+            expect(sudoku.get_column([[], [], []])).to.deep.equal([]);
+        });
+
+        it('expects an array of three sub-arrays and a specifier, and returns the top three cells of each', () => {
+            const subArrays = [
+                [1, 2, 3, 4, 5, 6, 7, 8, 9],
+                [1, 2, 3, 4, 5, 6, 7, 8, 9],
+                [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            ];
+
+            const expectedResult = [1, 4, 7, 1, 4, 7, 1, 4, 7];
+
+            expect(sudoku.get_column(subArrays, 'left')).to.deep.equal(expectedResult);
+        });
+
+        it('expects an array of three sub-arrays and a specifier, and returns the middle three cells of each', () => {
+            const subArrays = [
+                [1, 2, 3, 4, 5, 6, 7, 8, 9],
+                [1, 2, 3, 4, 5, 6, 7, 8, 9],
+                [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            ];
+
+            const expectedResult = [2, 5, 8, 2, 5, 8, 2, 5, 8];
+
+            expect(sudoku.get_column(subArrays, 'middle')).to.deep.equal(expectedResult);
+        });
+
+        it('expects an array of three sub-arrays and a specifier, and returns the bottom three cells of each', () => {
+            const subArrays = [
+                [1, 2, 3, 4, 5, 6, 7, 8, 9],
+                [1, 2, 3, 4, 5, 6, 7, 8, 9],
+                [1, 2, 3, 4, 5, 6, 7, 8, 9]
+            ];
+
+            const expectedResult = [3, 6, 9, 3, 6, 9, 3, 6, 9];
+
+            expect(sudoku.get_column(subArrays, 'right')).to.deep.equal(expectedResult);
         });
     });
 
