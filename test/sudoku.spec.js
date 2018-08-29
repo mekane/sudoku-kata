@@ -18,10 +18,10 @@ describe('The sudoku module', () => {
         expect(sudoku.is_solution([[], [], [], [], [], [], [], [], []])).to.equal(false);
 
         const invalidSolution = [
-            [9, 8, 7, 6, 5, 5, 3, 2, 1],
+            [9, 9, 7, 6, 5, 5, 3, 2, 1],
             [1, 1, 2, 2, 3, 4, 5, 6, 7],
             [9, 8, 7, 6, 5, 5, 3, 2, 1],
-            [1, 1, 2, 2, 3, 4, 5, 6, 7],
+            [1, 1, 2, 2, 3, 4, 5, 1, 7],
             [9, 8, 7, 6, 5, 5, 3, 2, 1],
             [1, 1, 2, 2, 3, 4, 5, 6, 7],
             [9, 8, 7, 6, 5, 5, 3, 2, 1],
@@ -32,7 +32,18 @@ describe('The sudoku module', () => {
     });
 
     it('should return true for valid solutions', () => {
-        //TODO: valid solution
+        const validSolution = [
+            [7, 5, 9, 4, 6, 3, 1, 2, 8],
+            [4, 6, 2, 5, 1, 8, 9, 7, 3],
+            [8, 1, 3, 2, 9, 7, 6, 4, 5],
+            [6, 9, 7, 5, 8, 4, 2, 3, 1],
+            [1, 8, 4, 2, 3, 6, 7, 9, 5],
+            [5, 3, 2, 9, 7, 1, 4, 8, 6],
+            [3, 4, 5, 9, 1, 2, 8, 7, 6],
+            [8, 2, 1, 6, 4, 7, 3, 5, 9],
+            [7, 6, 9, 3, 5, 8, 1, 2, 4]
+        ];
+        expect(sudoku.is_solution(validSolution)).to.equal(true);
     });
 
     describe('the is_sub_array_valid method', () => {

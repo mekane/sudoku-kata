@@ -21,20 +21,21 @@
     <favorites_list name="tech-take-home-marty-kane" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.26569343">
+    <splitter split-orientation="vertical" split-proportion="0.43065694">
       <split-first>
         <leaf>
           <file leaf-file-name="sudoku.spec.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/test/sudoku.spec.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="394">
-                  <caret line="156" column="11" selection-start-line="156" selection-start-column="11" selection-end-line="156" selection-end-column="11" />
+                <state relative-caret-position="210">
+                  <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
                   <folding>
-                    <element signature="e#1244#2300#0" expanded="false" />
-                    <element signature="e#1425#1948#0" expanded="false" />
-                    <element signature="e#2008#2292#0" expanded="false" />
-                    <element signature="e#2358#4157#0" expanded="false" />
-                    <element signature="e#2875#3217#0" expanded="false" />
+                    <element signature="e#1690#2746#0" expanded="false" />
+                    <element signature="e#1871#2394#0" expanded="false" />
+                    <element signature="e#2454#2738#0" expanded="false" />
+                    <element signature="e#3321#3663#0" expanded="false" />
+                    <marker date="1535552561000" expanded="false" signature="2804:4603" ph="{...}" />
+                    <marker date="1535552561000" expanded="false" signature="4664:6484" ph="{...}" />
                   </folding>
                 </state>
               </provider>
@@ -47,10 +48,11 @@
           <file leaf-file-name="sudoku.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/sudoku.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="263">
-                  <caret line="107" column="18" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="18" />
+                <state relative-caret-position="148">
+                  <caret line="81" column="8" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="8" />
                   <folding>
-                    <element signature="n#!!block;n#is_sub_array_valid#0" expanded="false" />
+                    <element signature="n#!!block;n#get_row#0" expanded="false" />
+                    <element signature="n#!!block;n#get_column#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -63,8 +65,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test/sudoku.spec.js" />
         <option value="$PROJECT_DIR$/src/sudoku.js" />
+        <option value="$PROJECT_DIR$/test/sudoku.spec.js" />
       </list>
     </option>
   </component>
@@ -243,12 +245,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1535547785298</updated>
-      <workItem from="1535547786770" duration="3292000" />
+      <workItem from="1535547786770" duration="4532000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3292000" />
+    <option name="totallyTimeSpent" value="4532000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="44" y="23" width="1236" height="777" extended-state="6" />
@@ -290,26 +292,28 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/sudoku.spec.js">
+    <entry file="file://$PROJECT_DIR$/src/sudoku.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="156" column="11" selection-start-line="156" selection-start-column="11" selection-end-line="156" selection-end-column="11" />
+        <state relative-caret-position="148">
+          <caret line="81" column="8" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="8" />
           <folding>
-            <element signature="e#1244#2300#0" expanded="false" />
-            <element signature="e#1425#1948#0" expanded="false" />
-            <element signature="e#2008#2292#0" expanded="false" />
-            <element signature="e#2358#4157#0" expanded="false" />
-            <element signature="e#2875#3217#0" expanded="false" />
+            <element signature="n#!!block;n#get_row#0" expanded="false" />
+            <element signature="n#!!block;n#get_column#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sudoku.js">
+    <entry file="file://$PROJECT_DIR$/test/sudoku.spec.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="107" column="18" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="18" />
+        <state relative-caret-position="210">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
           <folding>
-            <element signature="n#!!block;n#is_sub_array_valid#0" expanded="false" />
+            <element signature="e#1690#2746#0" expanded="false" />
+            <element signature="e#1871#2394#0" expanded="false" />
+            <element signature="e#2454#2738#0" expanded="false" />
+            <element signature="e#3321#3663#0" expanded="false" />
+            <marker date="1535552561000" expanded="false" signature="2804:4603" ph="{...}" />
+            <marker date="1535552561000" expanded="false" signature="4664:6484" ph="{...}" />
           </folding>
         </state>
       </provider>
