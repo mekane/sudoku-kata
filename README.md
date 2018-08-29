@@ -1,4 +1,4 @@
-# Take-Home Tech Exercise: Sudoku Solution Validator
+# Programming Exercise: Sudoku Solution Validator
 
 ## Getting Started
 
